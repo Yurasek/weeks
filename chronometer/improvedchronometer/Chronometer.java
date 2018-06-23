@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import static java.lang.System.out;
 
 
-public class ClassThread implements Runnable {
+public class Chronometer implements Runnable {
 
     public int time = 0;
 
@@ -26,7 +26,7 @@ public class ClassThread implements Runnable {
             }
     }
     public static void main(String[] args) {
-        ClassThread seconds = new ClassThread();
+        Chronometer seconds = new Chronometer();
         new Thread(seconds).start();
         (new Thread(()->{
             while(seconds.getTime() < 60) {
